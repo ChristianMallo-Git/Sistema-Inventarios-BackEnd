@@ -14,7 +14,6 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-//http://localhost:8080/inventory-app
 @RequestMapping("inventory-app")
 @CrossOrigin(value="http://localhost:4200")
 public class ProductController {
@@ -25,7 +24,6 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    //http://localhost:8080/inventory-app/products
     @GetMapping("/products")
     public List<Product> getProducts(){
         List<Product> listProducts = productService.listProduct();
